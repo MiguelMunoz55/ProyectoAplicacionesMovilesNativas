@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="12dp">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_cabecera_tarjeta"
+        android:orientation="vertical" android:padding="18dp">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_comisiones_del_mes" android:textColor="#B8C4D9" android:textSize="12sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="@string/t_5_por_venta" android:textColor="@color/cian" android:textSize="12sp" android:textStyle="bold" />
+        </RelativeLayout>
+        <TextView android:id="@+id/tvComision" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="@color/white" android:textSize="28sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tvResumen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="#B8C4D9" android:textSize="12sp" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPedidos" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="12dp" android:layout_weight="1" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnExportar" style="@style/BtnContorno" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/t_exportar_reporte_csv" />
+</LinearLayout>

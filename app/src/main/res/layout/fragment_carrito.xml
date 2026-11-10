@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="12dp">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardDireccion" style="@style/TarjetaSpec" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:clickable="true" android:focusable="true" app:cardBackgroundColor="@color/azul_claro">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:padding="12dp">
+            <ImageView
+                android:layout_width="22dp" android:layout_height="22dp" android:importantForAccessibility="no"
+                android:src="@drawable/ic_ubicacion" app:tint="@color/azul_spechub" />
+            <TextView
+                android:id="@+id/tvDireccion" style="@style/TxtSubtitulo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" android:textSize="13sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvItems" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tvVacio" style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:text="@string/t_tu_carrito_esta_vacio" android:visibility="gone" />
+    </FrameLayout>
+    <LinearLayout android:id="@+id/llResumen" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <com.google.android.material.card.MaterialCardView style="@style/TarjetaSpec" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_subtotal" />
+                    <TextView android:id="@+id/tvSubtotal" style="@style/TxtSubtitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:textSize="14sp" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+                    <TextView style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_envio_2" />
+                    <TextView android:id="@+id/tvEnvio" style="@style/TxtSubtitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:textSize="14sp" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+                    <TextView style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_iva_incluido" />
+                    <TextView android:id="@+id/tvIva" style="@style/TxtSubtitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:textSize="14sp" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+                    <TextView style="@style/TxtSubtitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_total" />
+                    <TextView android:id="@+id/tvTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:textColor="@color/azul_spechub" android:textSize="18sp" android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPagar" style="@style/BtnPrimario" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" android:text="@string/t_ir_a_pagar" />
+</LinearLayout>

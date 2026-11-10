@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/TarjetaSpec" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+    android:clickable="true" android:focusable="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:padding="10dp">
+        <ImageView android:id="@+id/ivImagen" android:layout_width="56dp" android:layout_height="56dp" android:background="@drawable/bg_imagen" android:contentDescription="@string/t_imagen_del_producto" />
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/tvTitulo" style="@style/TxtSubtitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:ellipsize="end" android:maxLines="1" android:textSize="14sp" />
+            <TextView android:id="@+id/tvDetalle" style="@style/TxtCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="12sp" />
+            <TextView android:id="@+id/tvEstado" style="@style/TxtPill" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" />
+        </LinearLayout>
+        <ImageButton android:id="@+id/btnEditar" android:layout_width="48dp" android:layout_height="48dp" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="@string/t_editar_producto" android:src="@drawable/ic_editar" app:tint="@color/texto_secundario" />
+        <ImageButton android:id="@+id/btnEliminar" android:layout_width="48dp" android:layout_height="48dp" android:background="?attr/selectableItemBackgroundBorderless" android:contentDescription="@string/t_eliminar_producto" android:src="@drawable/ic_eliminar" app:tint="@color/rojo" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

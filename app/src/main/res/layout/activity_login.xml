@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="@color/white">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/azul_noche"
+            android:gravity="center" android:orientation="vertical" android:paddingTop="56dp" android:paddingBottom="40dp">
+            <TextView
+                android:layout_width="72dp" android:layout_height="72dp" android:background="@drawable/bg_logo" android:gravity="center"
+                android:text="@string/t_s" android:textColor="@color/white" android:textSize="38sp" android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="@string/t_spechub" android:textColor="@color/white" android:textSize="24sp" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+            <TextView style="@style/TxtTitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_iniciar_sesion" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCorreo" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_correo_electronico" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCorreo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"  />
+        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilClave" style="@style/CampoTexto"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/t_contrasena" app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etClave" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/tvOlvide" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="end" android:padding="8dp" android:text="@string/t_olvidaste_tu_contrasena"
+                android:textColor="@color/azul_spechub" android:textSize="13sp" android:textStyle="bold" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnIngresar" style="@style/BtnPrimario" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/t_ingresar" />
+            <TextView
+                style="@style/TxtCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:gravity="center" android:text="@string/t_o_continua_con" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoogle" style="@style/BtnContorno" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/t_continuar_con_google" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHuella" style="@style/BtnTonal" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="@string/t_ingresar_con_huella" app:icon="@drawable/ic_huella" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistro" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/t_no_tienes_cuenta_registrate" />
+            <TextView
+                style="@style/TxtCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:background="@drawable/bg_imagen" android:padding="12dp" android:textSize="12sp"
+                android:text="@string/t_cuentas_de_prueba_nadmin_admin_s" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

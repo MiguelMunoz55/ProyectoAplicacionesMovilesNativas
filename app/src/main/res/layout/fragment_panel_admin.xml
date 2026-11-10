@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+        <TextView style="@style/TxtTitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4dp" android:text="@string/t_resumen_general" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <com.google.android.material.card.MaterialCardView style="@style/TarjetaSpec" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="4dp" android:layout_weight="1">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                    <TextView style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_usuarios_activos" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvUsuarios" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/azul_spechub" android:textSize="22sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView style="@style/TarjetaSpec" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="4dp" android:layout_weight="1">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                    <TextView style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_vendedores" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvVendedores" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/cian_oscuro" android:textSize="22sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <com.google.android.material.card.MaterialCardView style="@style/TarjetaSpec" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="4dp" android:layout_weight="1">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                    <TextView style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_ventas_hoy" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvVentasHoy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/verde_texto" android:textSize="22sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView style="@style/TarjetaSpec" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="4dp" android:layout_weight="1">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                    <TextView style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_productos_pendientes" android:textSize="12sp" />
+                    <TextView android:id="@+id/tvPendientes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/ambar_texto" android:textSize="22sp" android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <com.google.android.material.card.MaterialCardView style="@style/TarjetaSpec" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+                <TextView style="@style/TxtSubtitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_ventas_ultimos_7_dias" android:textSize="14sp" />
+                <co.edu.ucompensar.spechub.ui.comun.GraficoBarrasView android:id="@+id/grafico" android:layout_width="match_parent" android:layout_height="140dp" android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView style="@style/TxtSubtitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4dp" android:layout_marginTop="16dp" android:text="@string/t_pendientes_de_revision" />
+        <LinearLayout android:id="@+id/llPendientes" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+        <TextView android:id="@+id/tvSinPendientes" style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4dp" android:text="@string/t_no_hay_productos_pendientes" android:visibility="gone" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardBuscar" style="@style/TarjetaSpec" android:layout_width="match_parent" android:layout_height="52dp"
+            android:clickable="true" android:focusable="true" app:cardCornerRadius="26dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:paddingStart="16dp">
+                <ImageView
+                    android:layout_width="22dp" android:layout_height="22dp" android:importantForAccessibility="no"
+                    android:src="@drawable/ic_search" app:tint="@color/texto_secundario" />
+                <TextView
+                    style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp" android:text="@string/t_buscar_celulares_laptops" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:scrollbars="none">
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipsCategorias" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleLine="true" />
+        </HorizontalScrollView>
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            android:background="@drawable/bg_banner" android:orientation="vertical" android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_hasta_25_en_portatiles"
+                android:textColor="@color/white" android:textSize="20sp" android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp"
+                android:text="@string/t_ofertas_de_temporada_con_garanti" android:textColor="@color/white" android:textSize="13sp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVerOfertas" style="@style/Widget.Material3.Button.ElevatedButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/t_ver_ofertas" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+            <TextView
+                style="@style/TxtSubtitulo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_centerVertical="true" android:text="@string/t_destacados" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVerTodo" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_alignParentEnd="true" android:text="@string/t_ver_todo" />
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDestacados" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

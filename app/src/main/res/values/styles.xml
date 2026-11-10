@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tipografía: Roboto (predeterminada) con jerarquía título / subtítulo / cuerpo -->
+    <style name="TxtTitulo">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/texto_principal</item>
+    </style>
+    <style name="TxtSubtitulo">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/texto_principal</item>
+    </style>
+    <style name="TxtCuerpo">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/texto_secundario</item>
+    </style>
+    <style name="TxtPill">
+        <item name="android:background">@drawable/bg_pill</item>
+        <item name="android:backgroundTint">@color/azul_claro</item>
+        <item name="android:textColor">@color/azul_spechub</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+    </style>
+
+    <style name="TarjetaSpec" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardElevation">1dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/borde</item>
+    </style>
+
+    <style name="BtnPrimario" parent="Widget.Material3.Button">
+        <item name="android:minHeight">52dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="BtnContorno" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">52dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="BtnTonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:minHeight">52dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="BtnPeligro" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">52dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textColor">@color/rojo</item>
+        <item name="strokeColor">@color/rojo</item>
+        <item name="rippleColor">@color/rojo_claro</item>
+    </style>
+    <style name="BtnExito" parent="Widget.Material3.Button">
+        <item name="android:minHeight">56dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="backgroundTint">@color/verde</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CampoTexto" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+    <style name="CampoLista" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="CirculoImagen">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="azul_noche">#0B1F3A</color>
+    <color name="azul_spechub">#2F6BFF</color>
+    <color name="azul_claro">#E8EEFF</color>
+    <color name="azul_barra">#A9BEFF</color>
+    <color name="cian">#19C3E6</color>
+    <color name="cian_claro">#DDF6FC</color>
+    <color name="cian_oscuro">#0E7C93</color>
+    <color name="verde">#1FA971</color>
+    <color name="verde_claro">#DDF5EA</color>
+    <color name="verde_texto">#0F7A52</color>
+    <color name="ambar">#F59E0B</color>
+    <color name="ambar_claro">#FFF1D6</color>
+    <color name="ambar_texto">#B45309</color>
+    <color name="rojo">#E5484D</color>
+    <color name="rojo_claro">#FDE3E4</color>
+    <color name="rojo_texto">#C62A2F</color>
+    <color name="fondo">#F4F6FB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="texto_principal">#0F1B2D</color>
+    <color name="texto_secundario">#5F6B7C</color>
+    <color name="borde">#D9DEE8</color>
+    <color name="gris_claro">#EEF0F4</color>
+</resources>

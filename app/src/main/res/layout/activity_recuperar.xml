@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/white">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="@color/azul_noche" app:title="@string/t_recuperar_contrasena" app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_atras" app:navigationIconTint="@color/white" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <TextView
+            style="@style/TxtCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/t_ingresa_el_correo_de_tu_cuenta_y" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCorreo" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_correo_electronico" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCorreo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnviar" style="@style/BtnPrimario" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/t_enviar_enlace" />
+    </LinearLayout>
+</LinearLayout>

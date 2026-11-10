@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/white">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="@color/azul_noche" app:title="@string/t_crear_cuenta" app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_atras" app:navigationIconTint="@color/white" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivFoto" android:layout_width="96dp" android:layout_height="96dp" android:layout_gravity="center_horizontal"
+                android:background="@color/azul_claro" android:contentDescription="@string/t_foto_de_perfil"
+                app:shapeAppearanceOverlay="@style/CirculoImagen" />
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFoto" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="@string/t_tomar_foto" app:icon="@drawable/ic_camara" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGaleria" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="@string/t_galeria" />
+            </LinearLayout>
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleRol" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" app:singleSelection="true" app:selectionRequired="true">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRolComprador" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/t_comprador" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRolVendedor" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/t_vendedor" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNombre" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_nombre_completo" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombre" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCorreo" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_correo_electronico" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCorreo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTelefono" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_telefono" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTelefono" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="phone"  />
+        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilClave" style="@style/CampoTexto" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:hint="@string/t_contrasena" app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etClave" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNit" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_cedula_o_nit_del_vendedor" android:visibility="gone">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNit" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="text"  />
+        </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCiudad" style="@style/CampoTexto" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1" android:hint="@string/t_ciudad">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCiudad" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGps" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_marginTop="12dp"
+                    android:text="@string/t_usar_gps" app:icon="@drawable/ic_ubicacion" />
+            </LinearLayout>
+            <CheckBox
+                android:id="@+id/cbMayor" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="@string/t_confirmo_que_soy_mayor_de_edad" />
+            <CheckBox
+                android:id="@+id/cbDatos" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/t_acepto_el_tratamiento_de_mis_dat" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistrar" style="@style/BtnPrimario" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/t_registrarme" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

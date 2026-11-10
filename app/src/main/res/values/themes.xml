@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SpecHub" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/azul_spechub</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/cian_oscuro</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorError">@color/rojo</item>
+        <item name="android:windowBackground">@color/fondo</item>
+        <item name="android:statusBarColor">@color/azul_noche</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/texto_principal</item>
+    </style>
+
+    <style name="Theme.SpecHub.Splash" parent="Theme.SpecHub">
+        <item name="android:windowBackground">@color/azul_noche</item>
+        <item name="android:navigationBarColor">@color/azul_noche</item>
+    </style>
+</resources>

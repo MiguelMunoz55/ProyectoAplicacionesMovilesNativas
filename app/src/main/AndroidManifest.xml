@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.fingerprint" android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+
+    <application
+        android:name=".SpecHubApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SpecHub">
+
+        <activity android:name=".ui.SplashActivity" android:exported="true" android:theme="@style/Theme.SpecHub.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.LoginActivity" android:exported="false" />
+        <activity android:name=".ui.RegistroActivity" android:exported="false" />
+        <activity android:name=".ui.RecuperarActivity" android:exported="false" />
+
+        <activity android:name=".ui.comprador.CompradorActivity" android:exported="false" android:launchMode="singleTop" />
+        <activity android:name=".ui.comprador.DetalleProductoActivity" android:exported="false" />
+        <activity android:name=".ui.comprador.PagoActivity" android:exported="false" />
+        <activity android:name=".ui.comprador.DireccionActivity" android:exported="false" />
+
+        <activity android:name=".ui.vendedor.VendedorActivity" android:exported="false" />
+        <activity android:name=".ui.vendedor.ProductoFormActivity" android:exported="false" />
+
+        <activity android:name=".ui.admin.AdminActivity" android:exported="false" />
+        <activity android:name=".ui.admin.UsuarioFormActivity" android:exported="false" />
+        <activity android:name=".ui.admin.RevisarProductoActivity" android:exported="false" />
+    </application>
+</manifest>

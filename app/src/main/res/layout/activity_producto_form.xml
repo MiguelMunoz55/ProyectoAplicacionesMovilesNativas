@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/white">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="@color/azul_noche" app:title="@string/t_nuevo_producto" app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_atras" app:navigationIconTint="@color/white" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <TextView style="@style/TxtSubtitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t_foto_del_producto" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center_vertical">
+                <ImageView android:id="@+id/ivPreview" android:layout_width="96dp" android:layout_height="96dp" android:background="@drawable/bg_imagen" android:contentDescription="@string/t_vista_previa_de_la_foto" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnCamara" style="@style/BtnTonal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/t_camara" app:icon="@drawable/ic_camara" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnGaleria" style="@style/BtnContorno" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/t_galeria" />
+                </LinearLayout>
+            </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTitulo" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_nombre_del_producto" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTitulo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textCapSentences" android:maxLength="80" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDescripcion" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_descripcion" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescripcion" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapSentences" android:gravity="top" android:minLines="3" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCategoria" style="@style/CampoLista"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/t_categoria">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/acCategoria" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMarca" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_marca" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMarca" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textCapWords"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilModelo" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_modelo" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etModelo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="text"  />
+        </com.google.android.material.textfield.TextInputLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilPrecio" style="@style/CampoTexto" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginEnd="6dp" android:layout_weight="1" android:hint="@string/t_precio_cop">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPrecio" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:maxLength="10" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilStock" style="@style/CampoTexto" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:layout_weight="1" android:hint="@string/t_stock">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etStock" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" android:maxLength="6" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCondicion" style="@style/CampoLista"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/t_condicion">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/acCondicion" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilGarantia" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_garantia_meses" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etGarantia" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="number" android:maxLength="2" />
+        </com.google.android.material.textfield.TextInputLayout>
+            <TextView style="@style/TxtSubtitulo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/t_ficha_tecnica" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRam" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_memoria_ram_ej_8_gb" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRam" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="text"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAlmacenamiento" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_almacenamiento_ej_256_gb" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAlmacenamiento" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="text"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilBateria" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_bateria_ej_5_000_mah" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etBateria" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="text"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilImei" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_imei_serial_obligatorio_en_smart" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etImei" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="number" android:maxLength="15" />
+        </com.google.android.material.textfield.TextInputLayout>
+            <TextView android:id="@+id/tvAviso" style="@style/TxtCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center" android:text="@string/t_sera_aprobado_por_un_administrad" android:textSize="12sp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnGuardar" style="@style/BtnPrimario" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/t_publicar_para_revision" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEliminar" style="@style/BtnPeligro" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/t_eliminar_producto" android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

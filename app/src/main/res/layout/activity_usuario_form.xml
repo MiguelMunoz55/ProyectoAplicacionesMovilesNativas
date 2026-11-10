@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/white">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+        android:background="@color/azul_noche" app:title="@string/t_editar_usuario" app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_atras" app:navigationIconTint="@color/white" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivAvatar" android:layout_width="88dp" android:layout_height="88dp" android:layout_gravity="center_horizontal"
+                android:background="@color/azul_claro" android:contentDescription="@string/t_foto_del_usuario" app:shapeAppearanceOverlay="@style/CirculoImagen" />
+            <TextView android:id="@+id/tvNombreCab" style="@style/TxtTitulo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilNombre" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_nombre" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNombre" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPersonName|textCapWords"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCorreo" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_correo_electronico" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCorreo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTelefono" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_telefono" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTelefono" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="phone"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRol" style="@style/CampoLista"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/t_rol">
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/acRol" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMotivo" style="@style/CampoTexto"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/t_motivo_del_cambio_auditoria" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMotivo" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="text|textCapSentences"  />
+        </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnGuardar" style="@style/BtnPrimario" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/t_crear_usuario" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSuspender" style="@style/BtnPeligro" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/t_suspender" android:visibility="gone" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEliminar" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/t_eliminar_cuenta_borrado_logico" android:textColor="@color/rojo" android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

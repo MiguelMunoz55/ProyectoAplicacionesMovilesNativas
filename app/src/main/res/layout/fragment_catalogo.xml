@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:paddingTop="8dp">
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:hint="@string/t_buscar_por_nombre_marca_o_modelo"
+        app:startIconDrawable="@drawable/ic_search" app:endIconMode="clear_text">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etBuscar" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:imeOptions="actionSearch" android:inputType="text" android:maxLength="50" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none" android:paddingStart="12dp">
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipsCategoria" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleLine="true" />
+    </HorizontalScrollView>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none" android:paddingStart="12dp">
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipsCondicion" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleLine="true" />
+    </HorizontalScrollView>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProductos" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:clipToPadding="false" android:padding="10dp" />
+        <TextView
+            android:id="@+id/tvVacio" style="@style/TxtCuerpo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:text="@string/t_no_encontramos_productos_con_eso" android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

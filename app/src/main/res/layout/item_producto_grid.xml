@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/TarjetaSpec" android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_margin="6dp" android:clickable="true" android:focusable="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="8dp">
+        <ImageView
+            android:id="@+id/ivImagen" android:layout_width="match_parent" android:layout_height="110dp"
+            android:background="@drawable/bg_imagen" android:contentDescription="@string/t_imagen_del_producto" />
+        <TextView
+            android:id="@+id/tvTitulo" style="@style/TxtSubtitulo" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:ellipsize="end" android:lines="2" android:textSize="13sp" />
+        <TextView
+            android:id="@+id/tvPrecio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp"
+            android:textColor="@color/azul_spechub" android:textSize="15sp" android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvVendedor" style="@style/TxtCuerpo" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:ellipsize="end" android:maxLines="1" android:textSize="11sp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
